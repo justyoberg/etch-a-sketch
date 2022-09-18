@@ -1,12 +1,38 @@
 const canvas = document.getElementById("canvas");
 const submit = document.querySelector(".submit");
 const currentSize = document.querySelector(".size");
+const penButton = document.querySelector(".pen");
+const eraserButton = document.querySelector(".eraser");
 
 var gridSize = 16;
+var mouseDown = false;
+var eraser = false;
+var pen = true;
+
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
+penButton.addEventListener("click", function() {
+  pen = true;
+  eraser = false;
+  penButton.style.backgroundColor = "black";
+  penButton.style.color = "beige";
+  eraserButton.style.backgroundColor = "beige";
+  eraserButton.style.color = "black";
+});
+
+eraserButton.addEventListener("click", function() {
+  eraser = true;
+  pen = false;
+  eraserButton.style.backgroundColor = "black";
+  eraserButton.style.color = "beige";
+  penButton.style.backgroundColor = "beige";
+  penButton.style.color = "black";
+});
 
 submit.addEventListener("click", function() {
   gridSize = document.querySelector(".grid-size").value;
-  if (gridSize > 16) return;
+  if (gridSize > 32) return;
   clearGrid();
   createGrid();
   currentSize.textContent = `Current size: ${gridSize} x ${gridSize}`
@@ -23,16 +49,19 @@ function createGrid() {
     smalldiv.style.width = (canvas.offsetWidth / gridSize) + "px";
     smalldiv.style.height = (canvas.offsetHeight / gridSize) + "px";
     smalldiv.classList.add("grid-square");
+    smalldiv.addEventListener('mouseover', setColor);
+    smalldiv.addEventListener('mousedown', setColor);
     canvas.appendChild(smalldiv);
   }
-  const gridSquares = document.querySelectorAll(".grid-square");
-  gridSquares.forEach(square => events(square));
 }
 
-function events(square) {
-  square.addEventListener("mousedown", function() {
-    square.style.backgroundColor = "black";
-  });
+function setColor(square) {
+  if (square.type === 'mouseover' && !mouseDown) return;
+  if (pen === true && eraser === false) {
+    square.target.style.backgroundColor = "black";
+  } else if (eraser === true && pen === false) {
+    square.target.style.backgroundColor = "beige";
+  }
 }
 
 createGrid();
