@@ -43,7 +43,7 @@ h2, h3 {
   height: 600px;
   box-shadow: 1px 1px 32px 8px rgb(0, 0, 0);
   padding: 0;
-  margin: 16px 0 64px 0;
+  margin: 16px 0 32px 0;
 }
 
 .tools {
@@ -96,6 +96,7 @@ h2, h3 {
 
 .footer {
   margin-top: auto;
+  margin-bottom: 0;
   color: beige;
   font-size: 18px;
   font-weight: bold;

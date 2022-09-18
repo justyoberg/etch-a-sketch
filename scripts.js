@@ -51,6 +51,7 @@ function createGrid() {
     smalldiv.classList.add("grid-square");
     smalldiv.addEventListener('mouseover', setColor);
     smalldiv.addEventListener('mousedown', setColor);
+    smalldiv.setAttribute('draggable', false);
     canvas.appendChild(smalldiv);
   }
 }
