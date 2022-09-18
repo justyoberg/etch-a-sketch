@@ -19,7 +19,12 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1 {
+  margin-top: 32px;
+  color: beige;
+}
+
+h2, h3 {
   color: beige;
   margin: 8px;
 }
@@ -52,7 +57,7 @@ h1, h2, h3 {
   border: none;
   background-color: red;
   color: beige;
-  transition: 0.25s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .submit:hover {
@@ -60,4 +65,20 @@ h1, h2, h3 {
   border: none;
   background-color: rgb(255, 95, 95);
   color: beige;
+}
+
+.grid-square {
+  transition: 0.05s ease-in-out;
+}
+
+.grid-square:hover {
+  background-color: gray;
+  transition: 0.05s ease-in-out;
+}
+
+.footer {
+  margin-top: auto;
+  color: beige;
+  font-size: 18px;
+  font-weight: bold;
 }
