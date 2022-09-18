@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etch-a-Sketch</title>
+  <title>Sketcher</title>
 </head>
 <body>
-  <h1>Etch-a-Sketch</h1>
+  <h1>Sketcher</h1>
   <div id="canvas"></div>
-  <h2>Set grid size: (max 64)</h2>
-  <input type="text" class="grid-size">
-  <button class="submit">Submit</button>
+  <h2>Current size: 16 x 16</h2>
+  <h3>Enter grid size: (max 16)</h3>
+  <div class="input-submit">
+    <input type="text" class="grid-size" value ="16">
+    <button class="submit">Submit</button>
+  </div>
   <script src="scripts.js"></script>
 </body>
 </html>

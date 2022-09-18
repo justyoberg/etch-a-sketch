@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: Roboto;
 }
 
 *, *:before, *:after {
@@ -11,18 +12,52 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: red;
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
 }
 
+h1, h2, h3 {
+  color: beige;
+  margin: 8px;
+}
+
+.input-submit {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
 #canvas {
   display: flex;
   flex-wrap: wrap;
+  background-color: beige;
   width: 600px;
   height: 600px;
-  box-shadow: 1px 1px 32px black;
+  box-shadow: 1px 1px 32px 8px rgb(0, 0, 0);
   padding: 0;
-  margin: 0;
+  margin: 16px;
+}
+
+.grid-size {
+  text-align: center;
+  font-size: 28px;
+  border: none;
+}
+
+.submit {
+  font-size: 22px;
+  border: none;
+  background-color: red;
+  color: beige;
+  transition: 0.25s ease-in-out;
+}
+
+.submit:hover {
+  font-size: 22px;
+  border: none;
+  background-color: rgb(255, 95, 95);
+  color: beige;
 }
