@@ -85,13 +85,23 @@ h2, h3 {
   color: beige;
 }
 
-.grid-square {
+.grid-square, .grid-square-dark,
+.grid-square-beige {
   transition: 0.05s ease-in-out;
 }
 
-.grid-square:hover {
+.grid-square:hover, .grid-square-dark:hover,
+.grid-square-beige:hover {
   background-color: gray;
   transition: 0.05s ease-in-out;
+}
+
+.grid-square-dark {
+  background-color: black;
+}
+
+.grid-square-beige {
+  background-color: beige;
 }
 
 .footer {

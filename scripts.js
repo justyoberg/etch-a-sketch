@@ -59,9 +59,11 @@ function createGrid() {
 function setColor(square) {
   if (square.type === 'mouseover' && !mouseDown) return;
   if (pen === true && eraser === false) {
-    square.target.style.backgroundColor = "black";
+    square.target.classList.remove("grid-square-beige");
+    square.target.classList.add("grid-square-dark");
   } else if (eraser === true && pen === false) {
-    square.target.style.backgroundColor = "beige";
+    square.target.classList.remove("grid-square-dark");
+    square.target.classList.add("grid-square-beige");
   }
 }
 
