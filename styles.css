@@ -40,8 +40,8 @@ h2, h3 {
   flex-wrap: wrap;
   flex-shrink: 0;
   background-color: beige;
-  width: 600px;
-  height: 600px;
+  width: 750px;
+  height: 750px;
   box-shadow: 1px 1px 32px 8px rgb(0, 0, 0);
   padding: 0;
   margin: 16px 0 32px 0;
