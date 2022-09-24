@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: red;
+  background-color: rgb(153, 0, 0);
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -74,7 +74,7 @@ h2, h3 {
 .submit {
   font-size: 22px;
   border: none;
-  background-color: red;
+  background-color: inherit;
   color: beige;
   transition: 0.15s ease-in-out;
 }
@@ -82,7 +82,7 @@ h2, h3 {
 .submit:hover {
   font-size: 22px;
   border: none;
-  background-color: rgb(255, 95, 95);
+  background-color: rgb(209, 62, 62);
   color: beige;
 }
 
@@ -109,6 +109,6 @@ h2, h3 {
   margin-top: auto;
   margin-bottom: 0;
   color: beige;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }

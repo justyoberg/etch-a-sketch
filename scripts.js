@@ -4,7 +4,7 @@ const currentSize = document.querySelector(".size");
 const penButton = document.querySelector(".pen");
 const eraserButton = document.querySelector(".eraser");
 
-var gridSize = 16;
+var gridSize = 32;
 var mouseDown = false;
 var eraser = false;
 var pen = true;
